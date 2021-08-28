@@ -1,0 +1,9 @@
+.app {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: linear-gradient(rgba(0, 0, 0, -0.3), rgba(0, 0, 0, -0.3)),
+    url("https://image.freepik.com/free-photo/weathered-blue-page_53876-88602.jpg")
+      repeat;
+}

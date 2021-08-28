@@ -1,0 +1,35 @@
+.product-card {
+  max-width: 300px;
+  /* margin-bottom: 28px; */
+  margin: 15px;
+}
+
+.mat-card {
+}
+
+.mat-card-image {
+  /* height: 50%; */
+  background-size: cover;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.productClass {
+  background-color: white;
+  margin: 0 60px;
+  padding-left: 40px;
+}
+
+.mat-form-field {
+  color: burlywood;
+  margin: 0 40px;
+}
+
+.filterAndBasket {
+  color: burlywood;
+  background-color: white;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  margin: 14px 60px;
+  padding: 12px;
+}

@@ -1,0 +1,14 @@
+.categoryClass {
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  background-color: black;
+  border: 1px solid;
+}
+.categoryClass:hover {
+  opacity: 0.8;
+}
+
+.mat-card-image {
+  margin: 0;
+}

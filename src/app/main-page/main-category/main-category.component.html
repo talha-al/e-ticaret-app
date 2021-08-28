@@ -1,0 +1,17 @@
+<div fxLayout="row wrap" fxLayoutAlign="flex-start">
+  <div
+    class="categoryClass"
+    *ngFor="let cat of categories"
+    fxLayout="column"
+    [routerLink]="['/products/category', cat.categoryId]"
+  >
+    <img mat-card-image [src]="cat.image" style="height: 250px; width: 400px" />
+    <div
+      fxFlex="1 1 auto"
+      fxLayoutAlign="center center"
+      style="font-size: 30px; font-weight: 700; padding: 6px; color: white"
+    >
+      {{ cat.name }}
+    </div>
+  </div>
+</div>

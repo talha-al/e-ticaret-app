@@ -1,0 +1,28 @@
+<div style="margin-bottom: 14px">
+  <mat-toolbar color="primary">
+    <span style="margin-right: 10px">Kategoriler</span>
+    <div *ngFor="let cat of categories">
+      <a
+        mat-button
+        class="btn"
+        [routerLink]="['/products/category', cat.categoryId]"
+      >
+        <span class="btn-text">
+          {{ cat.name }}
+        </span>
+      </a>
+    </div>
+  </mat-toolbar>
+</div>
+<!--
+<div class="navClass" fxLayout="row" fxLayoutAlign="start center">
+  <button
+    class="btn"
+    *ngFor="let cat of categories"
+    style="margin: 6px"
+    (click)="test(cat.categoryId)"
+    mat-stroked-button
+  >
+    {{ cat.name }}
+  </button>
+</div> -->

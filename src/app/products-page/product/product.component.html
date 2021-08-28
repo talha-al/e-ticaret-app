@@ -1,0 +1,67 @@
+<div class="filterAndBasket" fxLayout="row">
+  <div fxFlex="95%" fxLayoutAlign="center center">
+    <mat-form-field
+      fxFlex="1 1 auto"
+      appearance="outline"
+      style="margin-bottom: -1.25em"
+    >
+      <mat-label>Ürün Arama</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="Aradığınız ürünü yazınız..."
+        [formControl]="searchFilter"
+      />
+      <mat-icon *ngIf="searchFilter.value === ''" matSuffix>search</mat-icon>
+      <mat-icon
+        *ngIf="searchFilter.value !== ''"
+        (click)="removeFilter()"
+        color="primary"
+        style="cursor: pointer"
+        matSuffix
+        >close</mat-icon
+      >
+    </mat-form-field>
+  </div>
+  <div fxFlex="15%" fxLayoutAlign="end center">
+    <button
+      mat-flat-button
+      [matBadge]="sepet.length"
+      [matBadgeHidden]="sepet.length < 1"
+    >
+      <mat-icon>shopping_cart</mat-icon>
+      <span>Sepetim</span>
+    </button>
+  </div>
+</div>
+
+<div *ngIf="filteredArray?.length < 1" style="margin: 0 60px">
+  <div class="alert alert-primary">Ürün Bulunamadı!</div>
+</div>
+
+<div fxLayout="row wrap" class="productClass" fxLayoutAlign="flex-start">
+  <ng-container *ngFor="let prod of filteredArray; index as idx">
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-card-title> {{ prod.name }} </mat-card-title>
+        <mat-card-subtitle> {{ prod.price }} </mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="prod.image" alt="Photo of a Shiba Inu" />
+      <mat-card-content>
+        <p>
+          {{ prod.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          fxFlex="1 1 auto"
+          mat-flat-button
+          color="primary"
+          (click)="sepeteEkle(prod)"
+        >
+          Sepete Ekle
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</div>
