@@ -2,26 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In this project, fake json server is used. For this reason, these steps should be followed before running Angular;
+1- Install the [Postman](https://www.postman.com/downloads/) application,
+2- `npm install -g json-server`,
+3- Enter the [e-ticaret-app-db](https://github.com/talha-al/e-ticaret-app-db) folder in CMD and run the following code: `json-server --watch db.json`
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  Now that our server is up, we can run angular.
+  Up the angular with `ng serve` or `npm run start` command.
+  
